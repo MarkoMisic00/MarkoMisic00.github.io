@@ -1,74 +1,100 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDemo</title>
+    <style>
+        #blue {
+            background-color: royalblue;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        #yellow {
+            background-color: rgb(163, 163, 7);
+        }
+
+        #black {
+            background-color: black;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <script defer src="app.js"></script> <!-- defer = Exectued after Html elements in body are available -->
+
+</head>
+
 <body>
-<h1>Hello Nenade</h1>
-<p>Radi be ovo cudo :D.</p>
 
-<div class="container py-5">
-    <!-- For demo purpose-->
-    <header class="text-center">
-        <h1 class="display-4 mb-4">Bootstrap Countdown</h1>
-        <p class="font-italic text-muted mb-0">Using Bootstrap 4 and
-            <a href="http://hilios.github.io/jQuery.countdown/" class="text-muted">
-                <u>jQuery Countdown</u></a>, Build nicely styled countdowns.</p>
-        <p class="font-italic text-muted">Snippet by
-            <a href="https://bootstrapious.com" class="text-muted">
-                <u>Bootstrapious</u>
-            </a>
-        </p>
-    </header>
+    <section id="blue">
+        <section class="hidden">
+            <h1>Wow</h1>
+            <p>
+                Willkommen auf dieser Seite wo mittels CSS und Javascript demonstriert wird wie man HTML aufhübschen
+                kann
+            </p>
+            <p>
+                Hier gehts weiter <i class="fa-solid fa-arrow-down"></i>
+            </p>
+        </section>
+    </section>
 
+    <section id="green">
+        <section class="hidden">
+            <h2>WebEntwicklung und eCommerce</h2>
+            <p>
+                Ein Kurs des WS2022/23 an der FH des BFI Wien
+            </p>
+        </section>
+    </section>
 
-    <div class="py-5">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-
-                <!-- Countdown 1-->
-                <div class="rounded bg-gradient-1 text-white shadow p-5 text-center mb-5">
-                    <p class="mb-4 font-weight-bold text-uppercase">New year's eve in</p>
-                    <div id="clock-b" class="countdown-circles d-flex flex-wrap justify-content-center pt-4"></div>
+    <section id="black">
+        <section class="hidden">
+            <div class="card">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>Misic Marko</h2>
+                    <p>- Student des FH BFI Wien</p>
+                    <p>- Interesse an <br> WebEntwicklung</p>
+                    <p>- Plauddert gern</p>
+                    <p>- HTML, CSS, JS</p>
+                    <p>- Java, REST-API</p>
+                    <a href="https://www.linkedin.com/in/marko-misic-0aab37250">LinkedIn</a>
                 </div>
-
-                <!-- Countdown 2-->
-                <div class="rounded bg-gradient-2 text-white shadow p-5 text-center mb-5">
-                    <p class="mb-0 font-weight-bold text-uppercase">Limited Time Only!</p>
-                    <div id="clock-a" class="countdown pt-4"></div>
-                </div>
-
-                <!-- Countdown 3-->
-                <div class="rounded bg-gradient-3 text-white shadow p-5 text-center mb-5">
-                    <p class="mb-0 font-weight-bold text-uppercase">We'll open in</p>
-                    <div id="clock" class="countdown pt-4"></div>
-                </div>
-
-                <!-- Countdown 4-->
-                <div class="rounded bg-gradient-4 text-white shadow p-5 text-center mb-5">
-                    <p class="mb-0 font-weight-bold text-uppercase">Let's use some call to actions</p>
-                    <div id="clock-c" class="countdown py-4"></div>
-
-                    <!-- Call to actions -->
-                    <ul class="list-inline">
-                        <li class="list-inline-item pt-2">
-                            <button id="btn-reset" type="button" class="btn btn-demo"><i class="glyphicon glyphicon-repeat"></i>Reset</button>
-                        </li>
-                        <li class="list-inline-item pt-2">
-                            <button id="btn-pause" type="button" class="btn btn-demo"><i class="glyphicon glyphicon-repeat"></i>Pause</button>
-                        </li>
-                        <li class="list-inline-item pt-2">
-                            <button id="btn-resume" type="button" class="btn btn-demo"><i class="glyphicon glyphicon-repeat"></i>Resume</button>
-                        </li>
-                    </ul>
-
-                </div>
-
+                <img src="Dev.png">
             </div>
-        </div>
-    </div>
-</div>
+        </section>
+    </section>
+
+    <section id="yellow">
+        <section class="hidden">
+            <h2>Was wir anbieten</h2>
+            <div class="logos">
+                <div class="logo hidden">
+                    <i class="fa-solid fa-bug"></i>
+                </div>
+                <div class="logo hidden">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="logo hidden">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="logo hidden">
+                    <i class="fa-solid fa-paintbrush"></i>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
 
 </body>
-</html> 
+
+</html>

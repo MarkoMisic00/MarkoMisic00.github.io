@@ -1,95 +1,140 @@
-/*
-*
-* ==================================================
-* UNNECESSARY STYLE - JUST TO MAKE IT LOOKS NICE
-* ==================================================
-*
-*/
-.countdown {
-    text-transform: uppercase;
-    font-weight: bold;
+
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+body {
+
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
-.countdown span {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 3rem;
-    margin-left: 0.8rem;
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 101vh;
 }
 
-.countdown span:first-of-type {
-    margin-left: 0;
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
 }
 
-.countdown-circles {
-    text-transform: uppercase;
-    font-weight: bold;
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
-.countdown-circles span {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+.logos {
+    display: flex;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.logo {
+    background-color: grey;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+
+.card {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: 0.5s;
 }
 
-.countdown-circles span:first-of-type {
-    margin-left: 0;
+.card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-
-/*
-*
-* ==================================================
-* FOR DEMO PURPOSES
-* ==================================================
-*
-*/
-body {
-    min-height: 100vh;
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
 }
-
-.bg-gradient-1 {
-    background: #7f7fd5;
-    background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
-    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+.card:hover .circle:before {
+    background: orange;
+    clip-path: circle(400px at center);
 }
-
-.bg-gradient-2 {
-    background: #654ea3;
-    background: -webkit-linear-gradient(to right, #654ea3, #eaafc8);
-    background: linear-gradient(to right, #654ea3, #eaafc8);
+.card img 
+{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translate(-50, -50%);
+    height: 250px;
+    pointer-events: none;
+    transition: 0.5s;
 }
-
-.bg-gradient-3 {
-    background: #ff416c;
-    background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b);
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+.card:hover img {
+    top: -20%;
+    left: 35%;
+    height: 450px;
+} 
+.card .content {
+    position: relative;
+    width: 50;
+    padding: 20px 20px 20px 40px;
+    transform: 0.5s;
+    opacity: 0;
+    visibility: hidden;
 }
-
-.bg-gradient-4 {
-    background: #007991;
-    background: -webkit-linear-gradient(to right, #007991, #78ffd6);
-    background: linear-gradient(to right, #007991, #78ffd6);
+.card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
 }
-
-.rounded {
-    border-radius: 1rem !important;
-}
-
-.btn-demo {
-    padding: 0.5rem 2rem !important;
-    border-radius: 30rem !important;
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
+.card .content h2 {
+    color: white;
     text-transform: uppercase;
-    font-weight: bold !important;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5px;
 }
+.card .content p {
+    color: white;
+}
+.card .content a {
+    position: relative;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: white;
+    color: black;
 
-.btn-demo:hover, .btn-demo:focus {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
 }
